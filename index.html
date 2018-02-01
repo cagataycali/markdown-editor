@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>Ders.im Koleksiyon</title>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/markdown-it.js"></script>
+    <script src="lib/toMark.js"></script>
+    <script src="lib/tui-code-snippet.js"></script>
+    <script src="lib/tui-color-picker.js"></script>
+    <script src="lib/codemirror.js"></script>
+    <script src="lib/highlight.js"></script>
+    <script src="lib/squire-raw.js"></script>
+    <link rel="stylesheet" href="lib/codemirror.css">
+    <link rel="stylesheet" href="lib/github.css">
+    <link rel="stylesheet" href="lib/explain.css">
+  </head>
+  <body>
+    <div class="code-html">
+    <script src="lib/plantuml-encoder.js"></script>
+    <script src="lib/raphael.js"></script>
+    <script src="lib/tui-chart.js"></script>
+    <script src="lib/tui-editor-Editor-all.js"></script>
+    <link rel="stylesheet" href="lib/tui-editor.css">
+    <link rel="stylesheet" href="lib/tui-editor-contents.css">
+    <link rel="stylesheet" href="lib/tui-color-picker.css">
+    <link rel="stylesheet" href="lib/tui-chart.css">
+
+    <div id="editSection"></div>
+    <script class="code-js">
+
+      var editor = new tui.Editor({
+        el: document.querySelector('#editSection'),
+        previewStyle: 'vertical',
+        height: 'auto',
+        initialEditType: 'wysvyg',
+        useCommandShortcut: true,
+        initialValue: '',
+        exts: ['scrollSync', 'colorSyntax', 'uml', 'chart', 'mark', 'table', 'taskCounter']
+      });
+      window.editor = editor
+    </script>
+  </body>
+</html>
